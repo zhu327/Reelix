@@ -110,7 +110,7 @@ Release archives, installers and `SHA256SUMS` carry signed build provenance; che
 # docker-compose.yml
 services:
   reelix:
-    image: ghcr.io/demonzoned/reelix:latest
+    image: ghcr.io/zhu327/reelix:latest
     container_name: reelix
     environment:
       - PUID=1000
@@ -128,6 +128,8 @@ services:
 ```bash
 docker compose up -d
 ```
+
+Besides `latest` and the version tags made by releases, every push to `master` publishes a multi-arch `ghcr.io/zhu327/reelix:edge` (and `:edge-<sha>`) built from that commit. Edge images follow `master` and get no compatibility promises; pin a version tag for anything you care about.
 
 To build the image yourself, run `docker build -f docker/Dockerfile -t reelix .` from the repository root. The image includes the web UI and runs as `PUID:PGID`.
 
