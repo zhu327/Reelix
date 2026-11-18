@@ -1,7 +1,7 @@
 # Example deployment. Copy to docker-compose.yml and adjust paths/IDs.
 services:
   reelix:
-    image: ghcr.io/demonzoned/reelix:latest
+    image: ghcr.io/zhu327/reelix:latest
     # Or build from source:
     # build:
     #   context: ..
